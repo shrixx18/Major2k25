@@ -1,8 +1,11 @@
-{% extends 'hospital/admin_base.html' %}
-{% block content %}
+{% extends 'hospital/admin_base.html' %} {% block content %}
 
 <head>
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link
+    href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+    rel="stylesheet"
+    id="bootstrap-css"
+  />
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
@@ -27,20 +30,20 @@ facebook : fb.com/sumit.luv
 <div class="container">
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <h6 class="panel-title">Department & Doctors</h6>
+      <h6 class="panel-title">Visitor specification</h6>
     </div>
     <table class="table table-hover" id="dev-table">
       <thead>
         <tr>
-          <th>Department</th>
-          <th>Doctor Name</th>
+          <th>Role</th>
+          <th>Visitor Name</th>
           <th>Mobile</th>
         </tr>
       </thead>
       {% for d in doctors %}
       <tr>
         <td>{{d.department}}</td>
-        <td> {{d.get_name}}</td>
+        <td>{{d.get_name}}</td>
         <td>{{d.mobile}}</td>
       </tr>
       {% endfor %}
